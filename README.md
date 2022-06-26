@@ -7,4 +7,4 @@
 4. Run **node app.js**
 
 ### Note:
-At the moment, the project uses local MongoDB for data persistence, instead of MongoDB Atlas. Your machine must have MongoDB installed and running in order for the project to run successfully. The current goal is to deploy the project on AWS or Heroku and use MongoDB Atlas for data persistence.
+- At the moment, the project uses local MongoDB for data persistence, instead of MongoDB Atlas. Your machine must have MongoDB installed and running in order for the project to run successfully. The current goal is to deploy the project on AWS or Heroku and use MongoDB Atlas for data persistence.
