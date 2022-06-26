@@ -12,7 +12,6 @@ function App() {
   //states:
   const [posters, setPosters] = useState({ "results": [] });
   const [showDisplay, setShowDisplay] = useState(false);
-  // const [isFavorite, setIsFavorite] = useState(false);
   const [id, setId] = useState();
   const [trailerPath, setTrailerPath] = useState('');
   const [title, setTitle] = useState('');
@@ -35,27 +34,17 @@ function App() {
     const { data } = await axios.get('http://localhost:5000/api/v1/favorites');
     let resultsObj = { "results": [] };
     for (var i = 0; i < data.favorites.length; ++i) {
-      // console.log(data.favorites[i]);
       const res = await axios.get(`https://api.themoviedb.org/3/movie/${data.favorites[i].id}?api_key=0c1cfc186512612b10c8d9f9fe03adb2&language=en-US`);
       resultsObj.results.push(res.data);
     }
     console.log(resultsObj);
     setPosters(resultsObj);
     setShowDisplay(false);
-
-
-
-
-
-
-
   }
 
 
   // //when user wishes to add or remove from favorites
   const onClickAddFavorites = async () => {
-
-
     if(!isFavorite){
       console.log("i want to add this to favorites with id: " + id);
       let newFavorite = {id: id};
@@ -89,11 +78,6 @@ function App() {
       setIsFavorite(!isFavorite);
 
     }
-
-
-
-
-
   }
 
 
@@ -105,8 +89,6 @@ function App() {
     const resTrailerPath = await fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=0c1cfc186512612b10c8d9f9fe03adb2&language=en-US");
     const dataTrailerPath = await resTrailerPath.json();
     setTrailerPath("https://www.youtube.com/embed/" + dataTrailerPath.results[0].key);
-    // console.log("https://www.youtube.com/embed/" + dataTrailerPath.results[0].key);
-
     const res = await fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0c1cfc186512612b10c8d9f9fe03adb2&language=en-US");
     const data = await res.json();
 

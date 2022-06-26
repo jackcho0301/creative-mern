@@ -7,7 +7,7 @@ require('dotenv').config();
 
 //middleware
 app.use(cors());
-app.use(express.static('./public')) //serve static files
+app.use(express.static('../public')) //serve static files
 app.use(express.json()); //we now have access to req.body
 
 //routes:
