@@ -92,30 +92,41 @@ body{
 }
 
 #close_button {
-  margin-left: 88%;
-  right: 1000px;
-  margin-bottom: 1%;
+  /* margin-left: 88%; */
+  /* right: 1000px; */
+  /* margin-bottom: 1%; */
+  display: block;
+  float: right;
   background-color: red;
   color: black;
-  background-repeat:no-repeat;
-  border: solid black;
+  /* background-repeat:no-repeat;
+
   border-width: 1pt;
-  cursor:pointer;
-  outline: none;
+  cursor:pointer; */
+  outline: none; 
+  border: solid black;
+  margin-bottom: 10px;
+  margin-right: 5px;
 }
 
 #add-fav-button {
-  margin-left: 70%;
+  display: block;
+  float: right;
+  /* margin-left: 70%;
   right: 1000px;
-  margin-bottom: 1%;
+  margin-bottom: 1%; */
   background-color: lightgreen;
   color: black;
-  background-repeat:no-repeat;
-  border: solid black;
+  margin-right: 5px;
+  /* background-repeat:no-repeat;
+
   border-width: 1pt;
   cursor:pointer;
-  outline: none;
-  width: 30%;
+
+  width: 30%; */
+  outline: none; 
+  border: solid black;
+  margin-bottom: 10px;
 }
 
 .delete-comment-btn {

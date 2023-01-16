@@ -21,7 +21,7 @@ function App() {
   const [isFavorite, setIsFavorite] = useState(false);
 
 
-  //when clicking categories
+  //when clicking categories button (See Popular || See Top-Rated)
   const onClickCategory = async (url) => {
     const res = await fetch(url);
     const data = await res.json();

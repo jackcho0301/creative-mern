@@ -23,7 +23,7 @@ const SearchForm = ({ onSearch }) => {
 
     return (
         <form id="form" onSubmit={onSubmit}>
-            <label htmlFor="input">Search Movies:</label>
+            {/* <label htmlFor="input">Search Movies:</label> */}
             <input type="text" id="input" value={text} onChange={(e) => setText(e.target.value)} />
             <button type="submit" id="search-btn">Search</button>
         </form>

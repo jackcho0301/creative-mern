@@ -19,9 +19,7 @@ const addFavorite = async (req, res) => {
 };   
 
 
-
 const removeFavorite = async (req, res) => {
-    // res.send('delete task');
     try {
         const {id} = req.body;
         const favorite = await Favorite.findOneAndDelete({id : id});
